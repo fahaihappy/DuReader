@@ -21,8 +21,8 @@ and Tensorflow model implementations.
 Authors: liuyuan(liuyuan04@baidu.com)
 Date:    2017/10/06 18:23:06
 """
-
-
+import sys
+sys.path.append('.')
 from .dureader_eval import compute_bleu_rouge
 from .dureader_eval import normalize
 from .preprocess import find_fake_answer
