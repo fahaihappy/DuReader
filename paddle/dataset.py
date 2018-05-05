@@ -26,8 +26,7 @@ import numpy as np
 import random
 import sys
 import paddle.v2 as paddle
-
-sys.path.append('../')
+ 
 from utils import find_best_question_match
 
 logger = logging.getLogger("paddle")
