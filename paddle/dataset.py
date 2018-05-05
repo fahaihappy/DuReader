@@ -27,7 +27,7 @@ import random
 import sys
 import paddle.v2 as paddle
 
-from utils import find_best_question_match
+from ..utils import find_best_question_match
 
 logger = logging.getLogger("paddle")
 logger.setLevel(logging.INFO)
