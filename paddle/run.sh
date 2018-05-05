@@ -50,9 +50,9 @@ vocab_size=200000
 train() {
     cp *.py $env_dir/
     PYTHONPATH=$PWD:$ROOT CUDA_VISIBLE_DEVICES=0 python $env_dir/run.py \
-        --trainset ../data/preprocessed/trainset/search.train.json \
-        --testset ../data/preprocessed/devset/search.dev.json \
-        --vocab_file ../data/vocab.search \
+        --trainset /mnt/datasets/dureader-1st-round/preprocessed/trainset/zhidao.train.json \
+        --testset /mnt/datasets/dureader-1st-round/preprocessed/testset/zhidao.test.json \
+        --vocab_file /home/kesci/work/vocab.search \
         --emb_dim $emb_dim \
         --batch_size 32 \
         --vocab_size $vocab_size \
@@ -69,7 +69,7 @@ train() {
 infer() {
     model_name=`basename $2`
     PYTHONPATH=$PWD:$ROOT CUDA_VISIBLE_DEVICES=0 python $env_dir/run.py \
-        --vocab_file ../data/vocab.search \
+        --vocab_file /home/kesci/work/vocab.search \
         --emb_dim $emb_dim \
         --batch_size 32 \
         --vocab_size $vocab_size \
