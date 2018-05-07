@@ -51,7 +51,7 @@ train() {
     cp *.py $env_dir/
     PYTHONPATH=$PWD:$ROOT CUDA_VISIBLE_DEVICES=0 python2 $env_dir/run.py \
         --trainset /mnt/datasets/dureader-1st-round/preprocessed/trainset/zhidao.train.json \
-        --testset /mnt/datasets/dureader-1st-round/preprocessed/testset/zhidao.test.json \
+        --testset /mnt/datasets/dureader-1st-round/preprocessed/devset/zhidao.dev.json \
         --vocab_file /home/kesci/work/vocab.search \
         --emb_dim $emb_dim \
         --batch_size 32 \
